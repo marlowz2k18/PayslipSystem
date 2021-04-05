@@ -13,8 +13,7 @@ public class EmpList {
 
     public boolean addEmployee(Employee employee) {
         if(findEmp(employee.getEmpName()) >=0) {
-            System.out.println("Employee is already in the system");
-            return false;
+            throw new IllegalArgumentException("Employee is already in the system");
         }
         myEmployees.add(employee);
         return true;
@@ -37,8 +36,7 @@ public class EmpList {
     public boolean fireEmployee(Employee employee){
         int foundEmpPost = findEmp(employee);
         if(foundEmpPost < 0){
-            System.out.println(employee.getEmpName() + ", can't find employee name.");
-            return false;
+            throw new IllegalArgumentException(employee.getEmpName() + ", can't find employee name.");
         }
         this.myEmployees.remove(foundEmpPost);
         System.out.println(employee.getEmpName() + ", was fired.");
