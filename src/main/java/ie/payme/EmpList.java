@@ -11,6 +11,7 @@ public class EmpList {
         this.myEmployees = new ArrayList<Employee>();
     }
 
+
     public boolean addEmployee(Employee employee) {
         if(findEmp(employee.getEmpName()) >=0) {
             throw new IllegalArgumentException("Employee is already in the system");
