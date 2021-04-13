@@ -63,12 +63,4 @@ public class EmpList {
         return true;
     }
 
-    public void employeePrint(){
-        System.out.println("Employee list");
-        for(int i=0; i<this.myEmployees.size(); i++){
-            System.out.println((i+1) + "." +
-                this.myEmployees.get(i).getEmpName() + "-->" +
-                this.myEmployees.get(i).getEmpId());
-        }
-    }
 }
